@@ -11,9 +11,7 @@ const Posts = ({posts, loading}) => {
                     {posts && posts.map((post, ind) => {
                         return (
                             <li key={ind} style={{marginBottom: "20px"}}>
-                               <span style={{fontWeight: "bolder"}}>{post.title}</span>
-                               <br />
-                               <br />
+                               <h4>{post.title}</h4>
                                <span>{post.body}</span>
                             </li>
                         )
