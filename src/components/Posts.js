@@ -12,7 +12,7 @@ const Posts = ({posts, loading}) => {
                         return (
                             <li key={ind} style={{marginBottom: "20px"}}>
                                <h4>{post.title}</h4>
-                               <span>{post.body}</span>
+                               <p>{post.body}</p>
                             </li>
                         )
                     })}
