@@ -8,16 +8,15 @@ const Posts = ({posts, loading}) => {
                 <p style={{fontWeight: "bolder"}}>Loading....</p>
                 :
                 <ul>
-                    {posts && posts.map((post, ind) => {
+                    {posts && posts.map(post => {
                         return (
-                            <li key={ind} style={{marginBottom: "20px"}}>
+                            <li key={post.id} style={{marginBottom: "20px"}}>
                                <h4>{post.title}</h4>
                                <p>{post.body}</p>
                             </li>
                         )
                     })}
                 </ul>
-                
             } 
         </div>
     )

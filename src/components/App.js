@@ -7,7 +7,7 @@ const App = () => {
   //const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
 
-  function fetchUsers() {
+  function fetchPosts() {
     //console.log("Function called")
     let arr = []
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -15,11 +15,12 @@ const App = () => {
       .then(data => arr.push(...data))
       .then(() => setLoading(false))
       .catch(err => console.log(err))
+    console.log(arr)
     return arr
   }
 
   let posts = useMemo(() => {
-    return fetchUsers()
+    return fetchPosts()
   }, [])
 
   // useEffect(() => {
